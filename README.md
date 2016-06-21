@@ -2,5 +2,21 @@
 ---
 thinking in react demo, write with es6, antd, webpack
 
-###dev
-    ~ npm run dev
+### depend
+
+```
+npm 3+ (better)
+nodejs 4+
+```
+
+### dev
+
+```
+ npm run dev
+ ```
+
+ ### build
+
+ ```
+ npm run build
+ ```
