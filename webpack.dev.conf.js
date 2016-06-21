@@ -42,10 +42,15 @@ var webpackConfig = {
                 loader: 'babel',
             }, {
                 test: /\.css$/,
+                include: path.resolve(__dirname, "./app"),
+                loader: "style-loader!css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss-loader",
+            }, {
+                test: /\.css$/,
+                exclude: path.resolve(__dirname, "./app"),              
                 loader: "style-loader!css-loader!postcss-loader",
             }, {
                 test: /\.(png|jpg|jpeg|gif)(\?v=\d+\.\d+\.\d+)?$/i,
-                loader: 'url?limit=10000'
+                loader: 'url?limit=10000',
             }, {
                 //html模板加载器，可以处理引用的静态资源，默认配置参数attrs=img:src，处理图片的src引用的资源
                 //比如你配置，attrs=img:src img:data-src就可以一并处理data-src引用的资源了，就像下面这样
@@ -60,7 +65,7 @@ var webpackConfig = {
         ]
     },
     postcss: [ 
-        autoprefixer({ browsers: ['last 2 versions'] }) 
+        autoprefixer({ browsers: ['last 3 versions', 'ie >= 9',] }) 
         ],
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
