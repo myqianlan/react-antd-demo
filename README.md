@@ -2,5 +2,5 @@
 ---
 thinking in react demo, write with es6, antd, webpack
 
-dev
-> npm run dev
+###dev
+    ~ npm run dev
