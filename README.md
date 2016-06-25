@@ -1,4 +1,4 @@
-## react & antd 分享例子
+## react & antd 例子
 ---
 thinking in react demo, write with es6, antd, webpack
 
@@ -15,8 +15,3 @@ nodejs 4+
  npm run dev
  ```
 
-### build
-
- ```
- npm run build
- ```
